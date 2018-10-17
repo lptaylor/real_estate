@@ -18,4 +18,12 @@ class House
     end
   end
 
+  def house_area
+    area_array = []
+    @rooms.each do |room|
+      area_array << room.find_area
+    end
+    area_array.sum
+
+  end
 end
