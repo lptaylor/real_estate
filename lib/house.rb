@@ -24,10 +24,15 @@ class House
       area_array << room.find_area
     end
     area_array.sum
-
   end
 
   def price_per_square_foot
     (@price.delete("$").to_f / house_area.to_f).round(2)
+  end
+
+  def sort_room_by_area
+    @rooms.sort_by.reverse_each do |room|
+      room.find_area
+    end
   end
 end
