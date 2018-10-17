@@ -7,6 +7,10 @@ attr_reader :catagory, :height, :width
 
   end
 
+  def find_area
+    @height * @width
+  end
+
 
 
 end

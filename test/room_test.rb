@@ -17,4 +17,11 @@ class RoomTest < Minitest::Test
 
     assert_equal :kitchen, room_1.catagory
   end
+
+  def test_find_area
+    room_1 = Room.new(:kitchen, 10, 13)
+    room_1.find_area
+
+    assert_equal 130, room_1.find_area
+  end
 end
