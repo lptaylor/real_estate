@@ -9,8 +9,13 @@ class House
   end
 
   def add_room(room)
-    Room.new
     @rooms << room
+  end
+
+  def rooms_from_catagory(catagory)
+    @rooms.select do |room|
+      room.catagory
+    end
   end
 
 end
