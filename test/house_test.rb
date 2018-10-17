@@ -25,4 +25,11 @@ class RoomTest < Minitest::Test
     assert_equal "123 Sugar Lane", house_1.address
   end
 
+  def test_there_are_no_rooms_inital
+    house_1 = House.new("$400000", "123 Sugar Lane")
+    house_1.rooms.length
+
+    assert_equal 0, house_1.rooms.length
+  end
+
 end
