@@ -12,9 +12,9 @@ class House
     @rooms << room
   end
 
-  def rooms_from_catagory(catagory)
+  def rooms_from_catagory(type)
     @rooms.select do |room|
-      room.catagory
+      room.catagory == type
     end
   end
 
